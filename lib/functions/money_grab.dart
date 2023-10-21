@@ -19,38 +19,40 @@ Can you design the function such that it will ask the user again if
 he doesn't input a integer?
  */
 
-// TEST MAIN FUNCTION
-void main(){
-  int bankRoll = 1000;
 
-  PlaceBet(bankRoll);
-
-  BuyIn();
+int getInteger(){
+  int number = 0;
+  try {
+  number = int.tryParse(stdin.readLineSync()!) !- 0;
+  } catch (e){
+    print("You have to input a number!");
+    getInteger();
+  }
+  return number;
 }
 
-int? PlaceBet(int bankRoll) {
-  int amount;
+int PlaceBet(int bankRoll) {
+  if (bankRoll == 0){
+    print("Error: no available funds.");
+    BuyIn();
+  }
   print("Give me an amount you want to bet");
-  amount = int.parse(stdin.readLineSync().toString());
-  if (amount is int) {
-  if (amount > bankRoll || amount == 0){
-    print("Your bet is either zero or larger than the bankroll");
+  int amount = getInteger();
+    if (amount > bankRoll){
+    print("You only have $bankRoll to play with! Pick a lower number.");
     PlaceBet(bankRoll);
-  } else {
-    print(amount); // delete
+    return amount;
+  } else if (amount == 0) {
+    print("You can't bet 0! Try again.");
+    PlaceBet(bankRoll);
+    return amount;
+    } else {
     return amount;
   }
-  } else {
-    print("That is not an integer");
-    PlaceBet(bankRoll);
-  }
-
 }
 
-int? BuyIn() {
-  int amount;
+int BuyIn() {
   print("How large is your buy in?");
-  amount = int.parse(stdin.readLineSync().toString());
-  print(amount);
+  int amount = getInteger();
   return amount;
 }
