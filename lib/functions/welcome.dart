@@ -12,5 +12,7 @@ void Welcome(){
   print('************************************************');
   print('Welcome to the BEST BlackJack game OF YOUR LIFE!');
   print('************************************************');
+  print('GET READY TO LOSE ALL YOUR MONEY');
+  print('************************************************');
 
 }
