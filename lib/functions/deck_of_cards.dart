@@ -1,3 +1,5 @@
+import 'dart:js_util';
+import 'dart:math';
 /*
 Create a function called DeckOfCards that returns a brand new deck of cards.
 
@@ -12,6 +14,13 @@ List<int> DeckOfCards() {
   List<int> Cards = [];
   List<int> Deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
   List<String> Suits = ["Spaði", "Tígul", "Hjarta", "Lauf"];
+
+  for (int i = 0; i < Suits.length; i++) {
+    for (int j = 0; j < Deck.length; j++) {
+      Cards.add(Deck[j]);
+    }
+  }
+  return Cards;
 }
 
 
