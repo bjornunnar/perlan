@@ -23,14 +23,15 @@ int? CheckWinner(List<int> playerHand, List<int> houseHand, int currentBankRoll,
   if(CheckIfBusted(houseHand)){
     // WIN
     currentBankRoll += currentBet;
+    print("YOU WIN!!!!!!..............");
   } else  {
     if ( playerScore! > houseScore! && CheckIfBusted(playerHand) == false) {
       // Win
       currentBankRoll += currentBet;
-      print("You Win!");
+      print("YOU WIN!!!!!!..............");
     } else {
       currentBankRoll -= currentBet;
-      print("You Lose!");
+      print("YOU LOOSE!!!!!!..............");
     }
   }
   ShowAllCards(playerHand, houseHand);

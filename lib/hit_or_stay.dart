@@ -24,7 +24,6 @@ If he busts after drawing this card, break the loop as well.
 
 
 void HitOrStay(List<int> playerHand, List<int> houseHand, List<int> deck){
-  print("LOG: HitOrStay started");
   List<String> options = ['Hit', 'Stay', 'Quit'];
 
   int? userRequest = null;
