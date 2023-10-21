@@ -19,6 +19,11 @@ List? CardNameList(List playerHand){
 }
 
 void Status(List<int> playerHand, List<int> houseHand){
+  //player hand
+  CalculateScore(hand);
+  CardNamer(i;)
 
+  //househand
+  CardNamer(i;)
 }
 
