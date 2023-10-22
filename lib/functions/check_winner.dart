@@ -19,7 +19,7 @@ import 'package:BlackJack/hit_or_stay.dart';
 int? CheckWinner(List<int> playerHand, List<int> houseHand, int currentBankRoll, int currentBet) {
   int? playerScore = CalculateScore(playerHand);
   int? houseScore = CalculateScore(houseHand);
-  
+
 
   if (CheckIfBusted(houseHand)) {
     // WIN
