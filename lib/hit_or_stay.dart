@@ -34,11 +34,10 @@ void HitOrStay(List<int> playerHand, List<int> houseHand, List<int> deck) {
     userRequest = OptionSelect('Pick an option:', options);
     if (userRequest == 1) { // Hit
       drawnCard = DealCard(deck);
-      print("You have drawn: $drawnCard");
+      print("You have drawn: ${CardNamer(drawnCard)}");
       playerHand.add(drawnCard);
       if (CheckIfBusted(playerHand)) {
         print("You busted");
-        Status(playerHand, houseHand);
         return;
       }
     } else if (userRequest == 2) {
