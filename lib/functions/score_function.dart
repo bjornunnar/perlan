@@ -35,7 +35,6 @@ int? CalculateScore(List<int> hand){
       sum += 10;
     }
   }
-  print('sum: $sum');
   return sum;
 }
 

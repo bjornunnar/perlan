@@ -26,7 +26,7 @@ void main() {
     }
     // Status(playerHand, houseHand);
     bankRoll = CheckWinner(playerHand, houseHand, bankRoll, bet);
-    print(bankRoll);
+    print("Bankroll:  $bankRoll");
 
     //returnHands()
   }

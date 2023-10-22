@@ -20,7 +20,6 @@ show the score of the house.
  */
 
 void HousePlays(List<int> houseHand, List<int> deck){
-  print('LOG: housePlays started');
   print("Before drawing score: ${CalculateScore(houseHand)}");
   int? sumOfHouseHand = CalculateScore(houseHand);
   int drawnCard;
@@ -45,5 +44,4 @@ void HousePlays(List<int> houseHand, List<int> deck){
   */
 
   print("Dealer score: $sumOfHouseHand");
-  print("LOG: housePlays ended");
 }
