@@ -20,12 +20,13 @@ void main() {
     //DealCard(deck);
     HitOrStay(playerHand, houseHand, deck);
     if (CheckIfBusted(playerHand) == true) {
-      CheckWinner(playerHand, houseHand, bankRoll, bet);
+      //CheckWinner(playerHand, houseHand, bankRoll, bet);
+      bankRoll = CheckWinner(playerHand, houseHand, bankRoll, bet);
     } else {
       HousePlays(houseHand, deck);
     }
     // Status(playerHand, houseHand);
-    bankRoll = CheckWinner(playerHand, houseHand, bankRoll, bet);
+    //bankRoll = CheckWinner(playerHand, houseHand, bankRoll, bet);
     print("Bankroll:  $bankRoll");
 
     //returnHands()
